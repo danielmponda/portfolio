@@ -4,13 +4,12 @@
   "description": "Portfolio",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "format": "prettier-eslint --write \"src/**/*.js\""
   },
   "author": "DanielMponda",
   "license": "ISC",
-  "dependencies": {
-    "node-sass": "^4.9.3"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danielmponda/portfolio.git"
@@ -18,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/danielmponda/portfolio/issues"
   },
-  "homepage": "https://github.com/danielmponda/portfolio#readme"
+  "homepage": "https://github.com/danielmponda/portfolio#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
 }
