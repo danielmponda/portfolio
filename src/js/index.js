@@ -4,4 +4,4 @@ window.addEventListener('load', () => {
   loader.style.display = 'none';
 });
 
-console.log('jslhl');
+console.log('js');
