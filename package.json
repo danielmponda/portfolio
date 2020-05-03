@@ -21,7 +21,8 @@
   "license": "ISC",
   "dependencies": {
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.2"
+    "lint-staged": "^10.2.2",
+    "scrollreveal": "^4.0.6"
   },
   "repository": {
     "type": "git",
