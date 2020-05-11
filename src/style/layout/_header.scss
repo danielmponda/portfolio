@@ -1,52 +1,159 @@
 header {
-  position: relative;
-  height: 300px;
-  background-color: rgba(46, 46, 46, 0.068);
   width: 100%;
-  // margin-bottom: 100px;
-  // box-shadow: 10px 53px 10px rgb(117, 117, 117);
-  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 70% 0%);
 
-  .menu {
-    position: absolute;
-    top: 0px;
-    right: 40px;
-    transform: rotate(40deg);
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+  .menu-btn-trapper {
+    background-color: rgba(46, 46, 46, 0.123);
+    // background-color: rgba(192, 9, 9, 0.781);
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 70% 0%);
+    height: 16%;
+    width: 100%;
+    // min-width: 200px;
+    position: fixed;
+    z-index: 3;
 
-    span {
-      display: block;
-      width: 20px;
-      height: 30px;
-      border-bottom: 3px solid rgb(255, 255, 255);
-      animation: arrows 2s infinite;
+    .menu-btn {
+      position: absolute;
+      // top: -80px;
+      right: 25px;
+      transform: rotate(45deg);
+      align-items: center;
+      text-align: center;
+      display: flex;
+      cursor: pointer;
+      flex-direction: column;
+      transition: ease 0.3s;
+      z-index: 3;
+      // width: 700px;
+      // background-color: rgba(131, 131, 131, 0.568);
+      // height: 300px;
+      // padding: 40px;
+
+      span {
+        display: block;
+        width: 15px;
+        height: 30px;
+        border-bottom: 3px solid rgb(255, 255, 255);
+        animation: arrows 2s infinite;
+      }
+      span:nth-child(2) {
+        opacity: 1;
+        animation-delay: -0.2s;
+        transform: rotate(0deg) translate(-20px, -20px);
+        width: 60px;
+      }
+      span:nth-child(1) {
+        animation-delay: -0.4s;
+        width: 110px;
+      }
+
+      // Retate Into close
+      &.close {
+        position: absolute;
+        right: 25px;
+        transform: rotate(0deg);
+
+        span {
+          animation: none;
+          height: 12px;
+          border-bottom: 1px solid rgb(53, 53, 53);
+          opacity: 0;
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:nth-child(3) {
+          transform: rotate(-50deg) translate(30px, 10px);
+          opacity: 1;
+          width: 50px;
+        }
+
+        span:nth-child(1) {
+          transform: rotate(40deg) translate(30px, -17px);
+          opacity: 1;
+          width: 50px;
+        }
+      }
     }
-
-    span:nth-child(2) {
-      animation-delay: -0.2s;
-      transform: rotate(0deg) translate(-20px, -20px);
-      width: 60px;
-    }
-    span:nth-child(1) {
-      animation-delay: -0.4s;
-      width: 100px;
+    @keyframes arrows {
+      0% {
+        opacity: 0;
+        transform: rotate(0deg) translate(20px, 20px);
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: rotate(0deg) translate(20px, 20px);
+      }
     }
   }
 
-  @keyframes arrows {
-    0% {
-      opacity: 0;
-      transform: rotate(0deg) translate(20px, 20px);
+  .menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    visibility: hidden; // By default the menu is hidden
+    text-align: center;
+    align-content: center;
+
+    &.show {
+      visibility: visible;
     }
-    50% {
-      opacity: 1;
+
+    &-nav {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      float: right;
+      width: 50%;
+      height: 100vh;
+      overflow: hidden;
+
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background-color: rgba(0, 0, 0, 0.315);
+      transform: translate3d(0, -100%, 0);
+      opacity: 0.9;
+      transition: all 0.5s ease-out;
+
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
     }
-    100% {
-      opacity: 0;
-      transform: rotate(0deg) translate(20px, 20px);
+
+    .nav-item {
+      transform: translate3d(600px, 0, 0);
+      transition: all 0.5s ease-out;
+
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
     }
+
+    .nav-link {
+      display: inline-block;
+      position: relative;
+      font-size: 40px;
+      text-transform: uppercase;
+      padding: 1rem 0;
+      font-weight: 300;
+      text-decoration: none;
+      color: blanchedalmond;
+      transition: ease-out 0.3s;
+      &:hover {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
   }
 }
