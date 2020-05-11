@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="./style/style.scss" />
+    <link rel="stylesheet" type="text/css" href="./style/main.scss" />
     <link
       href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap"
       rel="stylesheet"
@@ -11,67 +11,171 @@
       href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,200&display=swap"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script
       src="https://kit.fontawesome.com/848c3fcb61.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <div class="hex-border">
-      <div class="hexagons">
-        <div class="hexagon"></div>
-        <div class="hexagon"></div>
-        <div class="hexagon"></div>
-        <div class="hexagon"></div>
-        <div class="hexagon"></div>
-        <div class="hexagon"></div>
-        <div class="hexagon"></div>
-      </div>
-    </div>
     <section>
       <header>
+        <div class="menu-btn-trapper">
+          <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
         <div class="menu">
-          <span></span>
-          <span></span>
-          <span></span>
+          <ul class="menu-nav">
+            <li class="nav-item">
+              <a href="#cover-page" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-page" class="nav-link">about</a>
+            </li>
+            <li class="nav-item">
+              <a href="#work-page" class="nav-link">work</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact-page" class="nav-link">contact</a>
+            </li>
+          </ul>
         </div>
       </header>
+
       <main>
-        <div class="cover-page">
-          <div class="section-a">
-            <img class="profileImg" src="./img/Perfection-2598.jpg" alt="" />
-            <h1>Daniel <span>Mponda</span></h1>
-          </div>
-          <div class="section-b">
-            <div class="about">
-              <div class="bio">
-                <span>"</span>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. In,
-                  veniam quos voluptatum officiis libero amet nulla. Sint
-                  incidunt, a voluptatum sequi nam quaerat perferendis.
-                </p>
+        <!-- Home Page 01-->
+        <div class="cover-page" id="cover-page">
+          <div class="container">
+            <div class="section-a">
+              <div class="profileImg">
+                <img src="./img/Perfection-2598.jpg" alt="" />
               </div>
-              <div class="social">
-                <i class="fab fa-github"></i> <i class="fab fa-google"></i>
-                <i class="fab fa-twitter"></i>
+              <div class="fullname">
+                <h1>Daniel <span>Mponda</span></h1>
               </div>
             </div>
+            <div class="section-b">
+              <div class="about">
+                <div class="bio">
+                  <span>"</span>
+                  <p>
+                    I am a professional Web Developer, Programmer, Designer &
+                    Enterprenuer.
+                  </p>
+                </div>
+                <div class="social">
+                  <i class="fab fa-github"></i> <i class="fab fa-google"></i>
+                  <i class="fab fa-twitter"></i>
+                </div>
+              </div>
 
-            <div class="scroll-arrows">
-              <!-- <span></span> -->
-              <span></span>
-              <span></span>
+              <a href="#about-page">
+                <div class="scroll-arrows">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
-        <div class="about-page">s</div>
-        <div class="work-page">e</div>
-        <div class="blog-page">e</div>
-        <div class="contact-page">ee</div>
+
+        <!-- About Page 02-->
+        <div class="about-page" id="about-page">
+          <div class="section-a">
+            <div class="title">
+              <h1>about<span> me</span></h1>
+            </div>
+          </div>
+          <a href="#work-page">
+            <div class="scroll-arrows">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Work Page 03-->
+        <div class="work-page" id="work-page">
+          <div class="section-a">
+            <div class="title">
+              <h1>Work</h1>
+            </div>
+          </div>
+          <a href="#blog-page">
+            <div class="scroll-arrows">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Blog Page 04-->
+        <div class="blog-page" id="blog-page">
+          <div class="section-a">
+            <div class="title">
+              <h1>Blog</h1>
+            </div>
+          </div>
+          <a href="#contact-page">
+            <div class="scroll-arrows">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Contact Page 05-->
+        <div class="contact-page" id="contact-page">
+          <div class="section-a">
+            <div class="title">
+              <h1>Contact</h1>
+            </div>
+          </div>
+          <a href="#cover-page">
+            <div class="scroll-arrows">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+        </div>
       </main>
-      <footer></footer>
     </section>
     <script src="./js/index.js"></script>
+    <script>
+      $(function () {
+        // Smooth Scrolling
+        $('a[href*="#"]:not([href="#"])').click(function () {
+          if (
+            location.pathname.replace(/^\//, '') ==
+              this.pathname.replace(/^\//, '') &&
+            location.hostname == this.hostname
+          ) {
+            var target = $(this.hash);
+            target = target.length
+              ? target
+              : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+              $('html, body').animate(
+                {
+                  scrollTop: target.offset().top,
+                },
+                1000
+              );
+              return false;
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
