@@ -9,12 +9,16 @@
 }
 
 body {
-  height: 100vh;
-  /* background-image: url("https://vignette.wikia.nocookie.net/overwatch/images/5/50/Wiki-background/revision/latest/scale-to-width-down/2000?cb=20171105231456"); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: rgba(196, 196, 196, 0.205);
-  // overflow: hidden;
+  height: 100%;
   width: 100%;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(196, 196, 196, 0.204);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-width: 300;
 }
