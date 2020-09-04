@@ -1,3 +1,23 @@
 @import './layout/style';
 @import './responsive/main-resp';
 @import './components/loader';
+
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+body {
+  min-width: 363px;
+}
+
+// section {
+//   height: 100%;
+//   width: 100%;
+//   background-color: rgba(196, 196, 196, 0.204);
+//   display: flex;
+//   flex-direction: column;
+//   align-content: center;
+//   min-width: 300;
+// }
