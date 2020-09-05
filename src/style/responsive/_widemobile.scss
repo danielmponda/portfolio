@@ -37,5 +37,74 @@
         }
       }
     }
+    .about-page {
+      // background-color: rgb(196, 196, 196);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      flex-direction: row;
+      align-items: center;
+
+      .section-a {
+        // align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        // background-color: rgb(196, 196, 196);
+        padding: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
+        width: 100%;
+
+        a {
+          color: white;
+          font-size: 19px;
+          font-weight: bold;
+          text-decoration: none;
+          padding: 10px;
+          // border: 1px solid black;
+          display: inline-block;
+          width: 200px;
+          // border-radius: 10px;
+          text-align: center;
+          margin: 10px;
+          background: #ff26008e;
+          font-family: cursive;
+        }
+      }
+      .section-b {
+        // align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        // background-color: rgb(196, 196, 196);
+        padding: 50px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        width: 100%;
+      }
+      .outterList {
+        font-family: 'Exo', sans-serif;
+        margin-bottom: 20px;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        // color: pink;
+        .listoutter {
+          margin-bottom: 25px;
+          height: 90px;
+          // border: 1px solid black;
+        }
+
+        div:first-child {
+          width: 60%;
+        }
+        div:last-child {
+          width: 40%;
+          margin-left: -60px;
+        }
+      }
+    }
   }
 }

@@ -2,11 +2,11 @@
 @import './responsive/main-resp';
 @import './components/loader';
 
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   min-width: 363px;
