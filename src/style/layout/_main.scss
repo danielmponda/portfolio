@@ -398,4 +398,277 @@ main {
       }
     }
   }
+
+  .work-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      margin-top: 30px;
+      width: 100%;
+      h1 {
+        font-family: 'Yesteryear', cursive;
+        color: #ff26008e;
+        text-align: center;
+        line-height: 0.94;
+        letter-spacing: 5px;
+        margin-bottom: 30px;
+        font-size: 35px;
+      }
+    }
+    .section-a {
+      height: 90vh;
+      width: 100%;
+      font-family: 'Exo', sans-serif;
+
+      .project {
+        min-height: 32%;
+        width: 100%;
+        margin-bottom: 50px;
+
+        h1 {
+          font-weight: lighter;
+          width: 100%;
+          background: rgba(218, 218, 218, 0.226);
+          display: block;
+          padding: 5px;
+          text-align: center;
+        }
+      }
+
+      .jsProjects {
+        .jsPro {
+          margin: 25px 0 25px 0;
+          height: 230px;
+          width: 100%;
+          // border: 1px solid rgb(110, 110, 110);
+          text-align: center;
+          h2 {
+            margin-bottom: 10px;
+          }
+          img {
+            width: 80%;
+            height: 70%;
+            display: block;
+            margin: auto;
+          }
+          a {
+            margin: 10px;
+            text-decoration: none;
+            padding: 5px 15px 5px 15px;
+            // border: 1px solid black;
+            display: inline-block;
+            border-radius: 10px;
+            background: #ff26008e;
+            color: white;
+          }
+        }
+        .weatherapp {
+        }
+        .portifolio {
+        }
+      }
+
+      .ReactVueProjects {
+        .ReactVuePro {
+          margin: 25px 0 25px 0;
+          height: 230px;
+          width: 100%;
+          // border: 1px solid rgb(110, 110, 110);
+          text-align: center;
+          h2 {
+            margin-bottom: 10px;
+          }
+          img {
+            width: 80%;
+            height: 70%;
+            display: block;
+            margin: auto;
+          }
+          a {
+            margin: 10px;
+            text-decoration: none;
+            padding: 5px 15px 5px 15px;
+            // border: 1px solid black;
+            display: inline-block;
+            border-radius: 10px;
+            background: #ff26008e;
+            color: white;
+          }
+        }
+      }
+      .ReactNativeProjects {
+        .ReactNativeProjects {
+          margin: 25px 0 25px 0;
+          height: 230px;
+          width: 100%;
+          // border: 1px solid rgb(110, 110, 110);
+          text-align: center;
+          h2 {
+            margin-bottom: 10px;
+          }
+          img {
+            width: 80%;
+            height: 70%;
+            display: block;
+            margin: auto;
+          }
+          a {
+            margin: 10px;
+            text-decoration: none;
+            padding: 5px 15px 5px 15px;
+            // border: 1px solid black;
+            display: inline-block;
+            border-radius: 10px;
+            background: #ff26008e;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .scroll-arrows {
+      // position: absolute;
+      bottom: 100px;
+      // transform: translate(-50%, -50%);
+      // margin-top: -40px;
+
+      span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-bottom: 3px solid rgb(15, 6, 6);
+        border-right: 3px solid rgb(7, 3, 3);
+        transform: rotate(45deg);
+        // margin: 10px;
+        animation: arrow 2s infinite;
+      }
+
+      span:nth-child(2) {
+        animation-delay: -0.2s;
+        transform: rotate(45deg) translate(-20px, -20px);
+      }
+      span:nth-child(3) {
+        animation-delay: -0.4s;
+      }
+    }
+  }
+
+  .blog-page {
+    background-color: rgb(196, 196, 196);
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .section-a {
+      height: 90vh;
+      .title {
+        margin-top: 30px;
+        width: 100%;
+        h1 {
+          float: left;
+          font-family: 'Yesteryear', cursive;
+          font-size: 25px;
+          color: #fffffffd;
+          line-height: 0.94;
+          margin-left: 70px;
+          letter-spacing: 5px;
+          margin-bottom: 30px;
+        }
+        h1 span {
+          color: #ff26008e;
+        }
+      }
+    }
+
+    .scroll-arrows {
+      // position: absolute;
+      bottom: 100px;
+      // transform: translate(-50%, -50%);
+      // margin-top: -40px;
+
+      span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-bottom: 3px solid rgb(15, 6, 6);
+        border-right: 3px solid rgb(7, 3, 3);
+        transform: rotate(45deg);
+        // margin: 10px;
+        animation: arrow 2s infinite;
+      }
+
+      span:nth-child(2) {
+        animation-delay: -0.2s;
+        transform: rotate(45deg) translate(-20px, -20px);
+      }
+      span:nth-child(3) {
+        animation-delay: -0.4s;
+      }
+    }
+  }
+
+  .contact-page {
+    // background-color: rgb(196, 196, 196);
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .section-a {
+      height: 90vh;
+      .title {
+        margin-top: 30px;
+        width: 100%;
+        h1 {
+          float: left;
+          font-family: 'Yesteryear', cursive;
+          font-size: 25px;
+          color: #30303077;
+          line-height: 0.94;
+          margin-left: 70px;
+          letter-spacing: 5px;
+          margin-bottom: 30px;
+        }
+        h1 span {
+          color: #ff26008e;
+        }
+      }
+    }
+
+    .scroll-arrows {
+      // position: absolute;
+      bottom: 100px;
+      transform: rotate(180deg);
+
+      // margin-top: -40px;
+
+      span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-bottom: 3px solid rgb(15, 6, 6);
+        border-right: 3px solid rgb(7, 3, 3);
+        transform: rotate(45deg);
+        // margin: 10px;
+        animation: arrow 2s infinite;
+      }
+
+      span:nth-child(2) {
+        animation-delay: -0.2s;
+        transform: rotate(45deg) translate(-20px, -20px);
+      }
+      span:nth-child(3) {
+        animation-delay: -0.4s;
+      }
+    }
+  }
 }
