@@ -189,25 +189,33 @@ main {
     flex-direction: column;
     align-items: center;
 
+    .about-title {
+      font-family: 'Yesteryear', cursive;
+      // font-family: 'Zilla Slab', 'Times New Roman', Times, serif;
+      font-size: 35px;
+      color: #ff26008e;
+      line-height: 0.94;
+      padding: 10px;
+      letter-spacing: 5px;
+      margin-bottom: 15px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
     .section-a {
       // display: flex;
       // flex-direction: column;
       width: 100%;
       height: 100%;
-
-      .about-title {
-        font-family: 'Yesteryear', cursive;
-        // font-family: 'Zilla Slab', 'Times New Roman', Times, serif;
-        font-size: 35px;
-        color: #ff26008e;
-        line-height: 0.94;
-        padding: 10px;
-        letter-spacing: 5px;
-        margin-bottom: 15px;
+      font-family: 'Exo', sans-serif;
+      h1 {
+        font-weight: lighter;
+        width: 100%;
+        background: rgba(218, 218, 218, 0.226);
+        display: block;
+        padding: 5px;
         text-align: center;
-        margin-top: 20px;
       }
-
       .first-desc {
         // font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
         // Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -239,6 +247,16 @@ main {
       flex-direction: column;
       width: 100%;
       height: 100%;
+      font-family: 'Exo', sans-serif;
+
+      h1 {
+        font-weight: lighter;
+        width: 100%;
+        background: rgba(218, 218, 218, 0.226);
+        display: block;
+        padding: 5px;
+        text-align: center;
+      }
 
       .about-title {
         // float: left;
@@ -258,10 +276,16 @@ main {
         margin: 0;
         padding: 0;
         list-style-type: none;
+        text-align: center;
         // color: pink;
 
-        li {
-          margin: 10px;
+        .listoutter {
+          margin: 0px 0px;
+          // background: pink;
+
+          p {
+            margin: 10px 0;
+          }
         }
 
         .innerList {
@@ -277,7 +301,6 @@ main {
               width: 100px;
               height: 45px;
               // border: 1px solid black;
-              float: left;
             }
             .yarn {
               width: 110px;
@@ -288,14 +311,12 @@ main {
             .html {
               width: 70px;
               height: 56px;
-              margin-right: 10px;
-              float: left;
+              // margin-right: 10px;
             }
             .css {
               width: 70px;
               height: 59px;
-              margin-right: 10px;
-              float: left;
+              // margin-right: 10px;
             }
             .js {
               width: 70px;
@@ -304,14 +325,11 @@ main {
             .eslint {
               width: 110px;
               height: 56px;
-
-              float: left;
             }
             .stdjs {
               width: 55px;
               height: 55px;
               margin-left: 10px;
-              float: left;
             }
             .airbnb {
               width: 65px;
@@ -323,7 +341,6 @@ main {
               width: 220px;
               height: 90px;
               margin-left: -20px;
-              float: left;
             }
             .parcle {
               width: 90px;
@@ -333,7 +350,6 @@ main {
               width: 57px;
               height: 60px;
               margin-left: -5px;
-              float: left;
             }
             .reactnt {
               width: 57px;
@@ -344,7 +360,6 @@ main {
               width: 70px;
               height: 56px;
               margin-left: -5px;
-              float: left;
             }
             .php {
               width: 90px;
@@ -355,7 +370,6 @@ main {
               width: 70px;
               height: 65px;
               margin-right: 10px;
-              float: left;
             }
             .postgre {
               width: 70px;
@@ -401,7 +415,7 @@ main {
 
   .work-page {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -420,7 +434,7 @@ main {
       }
     }
     .section-a {
-      height: 90vh;
+      height: 100%;
       width: 100%;
       font-family: 'Exo', sans-serif;
 
@@ -450,8 +464,8 @@ main {
             margin-bottom: 10px;
           }
           img {
-            width: 80%;
-            height: 70%;
+            width: 290.391px;
+            height: 163.391px;
             display: block;
             margin: auto;
           }
@@ -483,8 +497,8 @@ main {
             margin-bottom: 10px;
           }
           img {
-            width: 80%;
-            height: 70%;
+            width: 290.391px;
+            height: 163.391px;
             display: block;
             margin: auto;
           }
@@ -511,8 +525,8 @@ main {
             margin-bottom: 10px;
           }
           img {
-            width: 80%;
-            height: 70%;
+            width: 290.391px;
+            height: 163.391px;
             display: block;
             margin: auto;
           }
@@ -558,31 +572,75 @@ main {
   }
 
   .blog-page {
-    background-color: rgb(196, 196, 196);
     width: 100%;
     height: 100vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    .title {
+      margin-top: 30px;
+      width: 100%;
+      h1 {
+        font-family: 'Yesteryear', cursive;
+        color: #ff26008e;
+        text-align: center;
+        line-height: 0.94;
+        letter-spacing: 5px;
+        margin-bottom: 30px;
+        font-size: 35px;
+      }
+    }
+
     .section-a {
-      height: 90vh;
-      .title {
-        margin-top: 30px;
+      height: 100%;
+      width: 100%;
+      font-family: 'Exo', sans-serif;
+      .project {
+        min-height: 32%;
         width: 100%;
+        margin-bottom: 50px;
+
         h1 {
-          float: left;
-          font-family: 'Yesteryear', cursive;
-          font-size: 25px;
-          color: #fffffffd;
-          line-height: 0.94;
-          margin-left: 70px;
-          letter-spacing: 5px;
-          margin-bottom: 30px;
+          font-weight: lighter;
+          width: 100%;
+          background: rgba(218, 218, 218, 0.226);
+          display: block;
+          padding: 5px;
+          text-align: center;
         }
-        h1 span {
-          color: #ff26008e;
+      }
+
+      .jsProjects {
+        .jsPro {
+          margin: 25px 0 25px 0;
+          height: 230px;
+          width: 100%;
+          // border: 1px solid rgb(110, 110, 110);
+          text-align: center;
+          h2 {
+            margin-bottom: 10px;
+          }
+          img {
+            width: 290.391px;
+            height: 163.391px;
+            display: block;
+            margin: auto;
+          }
+          a {
+            margin: 10px;
+            text-decoration: none;
+            padding: 5px 15px 5px 15px;
+            // border: 1px solid black;
+            display: inline-block;
+            border-radius: 10px;
+            background: #ff26008e;
+            color: white;
+          }
+        }
+        .weatherapp {
+        }
+        .portifolio {
         }
       }
     }
