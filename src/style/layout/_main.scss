@@ -10,6 +10,7 @@ main {
     height: 100vh;
     // min-height: 100vh;
     width: 100%;
+    scroll-snap-align: start;
 
     .container {
       width: 100%;
@@ -140,8 +141,6 @@ main {
 
         .scroll-arrows {
           position: relative;
-          // bottom: 100px;
-          // transform: translate(-50%, -50%);
           margin-top: 10px;
 
           span {
@@ -188,6 +187,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-snap-align: start;
 
     .about-title {
       font-family: 'Yesteryear', cursive;
@@ -419,6 +419,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-snap-align: start;
 
     .title {
       margin-top: 30px;
@@ -483,6 +484,9 @@ main {
         .weatherapp {
         }
         .portifolio {
+          img {
+            border: 1px solid rgba(31, 31, 31, 0.411);
+          }
         }
       }
 
@@ -577,6 +581,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
+    scroll-snap-align: start;
 
     .title {
       margin-top: 30px;
@@ -653,8 +659,8 @@ main {
 
       span {
         display: block;
-        width: 30px;
-        height: 30px;
+        width: 10px;
+        height: 10px;
         border-bottom: 3px solid rgb(15, 6, 6);
         border-right: 3px solid rgb(7, 3, 3);
         transform: rotate(45deg);
@@ -676,47 +682,132 @@ main {
     // background-color: rgb(196, 196, 196);
     width: 100%;
     height: 100vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-snap-align: start;
+
+    .title {
+      margin-top: 30px;
+      width: 100%;
+      h1 {
+        font-family: 'Yesteryear', cursive;
+        color: #ff26008e;
+        text-align: center;
+        line-height: 0.94;
+        letter-spacing: 5px;
+        margin-bottom: 30px;
+        font-size: 35px;
+      }
+    }
 
     .section-a {
-      height: 90vh;
-      .title {
-        margin-top: 30px;
+      height: 100vh;
+      width: 100%;
+      font-family: 'Exo', sans-serif;
+      h1 {
+        font-weight: lighter;
         width: 100%;
-        h1 {
-          float: left;
-          font-family: 'Yesteryear', cursive;
-          font-size: 25px;
-          color: #30303077;
-          line-height: 0.94;
-          margin-left: 70px;
-          letter-spacing: 5px;
-          margin-bottom: 30px;
-        }
-        h1 span {
-          color: #ff26008e;
-        }
+        background: rgba(218, 218, 218, 0.226);
+        display: block;
+        padding: 5px;
+        text-align: center;
+      }
+
+      .contact-form {
+        flex: 3;
+        padding-top: 15px;
+        flex-wrap: wrap;
+        display: flex;
+      }
+
+      .contact-form > div {
+        margin-bottom: 10px;
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .contact-form h2 {
+        margin-bottom: 10px;
+      }
+      textarea {
+        height: 150px;
+      }
+
+      .contact-form input,
+      textarea,
+      .submit-btn {
+        width: 100%;
+        padding: 0.5rem;
+        background-color: rgba(119, 119, 119, 0.281);
+        /* background-color: rgba(255, 255, 255, 0.397); */
+        border: none;
+        color: rgb(48, 48, 48);
+        font-size: 15px;
+      }
+
+      .contact-form input:focus {
+        background-color: rgba(199, 199, 199, 0.281);
+        outline-color: #ff26008e;
+      }
+
+      .contact-form textarea:focus {
+        background-color: rgba(199, 199, 199, 0.281);
+        outline-color: #ff26008e;
+      }
+
+      .contact-form label {
+        display: block;
+        text-align: left;
+        margin-left: 5px;
+      }
+
+      .contact-form .submit-btn {
+        background-color: #ff26008e;
+        cursor: pointer;
+        color: white;
+        width: 100%;
+        /* margin-bottom: -0px; */
+        transition: ease 0.3s;
+        font-family: 'Exo', sans-serif;
+        height: 45px;
+      }
+
+      .submit-btn:hover {
+        background-color: rgba(255, 38, 0, 0.945);
+        /* color: black; */
+      }
+
+      .social {
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+        // background: black;
+      }
+
+      .social i {
+        font-size: 20px;
+        padding: 12px;
+        color: rgb(88, 88, 88);
+        background-color: rgba(63, 63, 63, 0.096);
+        width: 42px;
+        height: 42px;
+        border-radius: 100%;
+        text-align: center;
       }
     }
 
     .scroll-arrows {
-      // position: absolute;
       bottom: 100px;
       transform: rotate(180deg);
-
-      // margin-top: -40px;
-
       span {
         display: block;
-        width: 30px;
-        height: 30px;
-        border-bottom: 3px solid rgb(15, 6, 6);
-        border-right: 3px solid rgb(7, 3, 3);
+        width: 10px;
+        height: 10px;
+        border-bottom: 1px solid rgb(15, 6, 6);
+        border-right: 1px solid rgb(7, 3, 3);
         transform: rotate(45deg);
-        // margin: 10px;
         animation: arrow 2s infinite;
       }
 
