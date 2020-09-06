@@ -104,3 +104,27 @@ function init() {
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
+
+// Contact from
+
+// Listen for from sumit
+
+document.getElementById('contactform').addEventListener('submit', submitFrom);
+
+function submitFrom(e) {
+  e.preventDefault();
+
+  // Get value
+
+  var UserName = getInputValue('userName');
+  var UserEmail = getInputValue('userEmail');
+  var UserMessage = getInputValue('userMessage');
+
+  console.log(UserName);
+}
+
+// function to get from values
+
+function getInputValue(id) {
+  return document.getElementById(id).value;
+}
