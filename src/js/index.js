@@ -1,5 +1,17 @@
 /* eslint-disable */
 
+var firebaseConfig = {
+  apiKey: 'AIzaSyBe6Pw_F6hr2kywHS_FJXa5JrNZVYCyijU',
+  authDomain: 'portfoliocontactform-beb39.firebaseapp.com',
+  databaseURL: 'https://portfoliocontactform-beb39.firebaseio.com',
+  projectId: 'portfoliocontactform-beb39',
+  storageBucket: 'portfoliocontactform-beb39.appspot.com',
+  messagingSenderId: '87529637836',
+  appId: '1:87529637836:web:68b29936dab1e3e474ff69',
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 // const loader = document.querySelector('.hex-border');
 
 // window.addEventListener('load', () => {
@@ -119,8 +131,6 @@ function submitFrom(e) {
   var UserName = getInputValue('userName');
   var UserEmail = getInputValue('userEmail');
   var UserMessage = getInputValue('userMessage');
-
-  console.log(UserName);
 }
 
 // function to get from values
