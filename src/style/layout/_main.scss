@@ -79,21 +79,27 @@ main {
             // margin-bottom: 50px;
             justify-content: center;
           }
-          span {
+          .quote {
             font-size: 40px;
             color: coral;
             font-style: oblique;
           }
-          p {
+          h1 {
             // margin-left: 20px;
+            max-width: 260px;
+            min-height: 128px;
             color: rgb(116, 116, 116);
             font-family: 'Exo', sans-serif;
             font-size: 24px;
             text-align: center;
+            font-weight: lighter;
             // word-spacing: 10px;
             // line-height: 65px;
-
             margin-bottom: 5px;
+          }
+
+          .txt-type > .txt {
+            border-right: 0.1rem solid rgb(185, 185, 185);
           }
 
           .social {
@@ -432,6 +438,7 @@ main {
         letter-spacing: 5px;
         margin-bottom: 30px;
         font-size: 35px;
+        width: 100%;
       }
     }
     .section-a {
@@ -712,6 +719,30 @@ main {
         display: block;
         padding: 5px;
         text-align: center;
+      }
+
+      .alert {
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        background: rgba(92, 158, 25, 0.466);
+        color: white;
+        font-weight: bolder;
+        padding: 5px;
+        opacity: 1;
+        transition: 5s;
+      }
+
+      .remove {
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        background: rgba(92, 158, 25, 0.466);
+        color: white;
+        font-weight: bolder;
+        padding: 5px;
+        opacity: 0;
+        transition: 2s;
       }
 
       .contact-form {

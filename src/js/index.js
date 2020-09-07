@@ -18,6 +18,9 @@ firebase.initializeApp(firebaseConfig);
 //   loader.style.display = 'none';
 // });
 
+////////////////////////// Menu /////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
@@ -48,7 +51,9 @@ const toggleMenu = () => {
 };
 
 menuBtn.addEventListener('click', toggleMenu);
-//
+
+////////////////////////// Type Method ////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 
 const TypeWriter = function (txtElement, words, wait = 3000) {
   this.txtElement = txtElement;
@@ -59,8 +64,6 @@ const TypeWriter = function (txtElement, words, wait = 3000) {
   this.type();
   this.isDeleting = false;
 };
-
-// Type Method
 
 TypeWriter.prototype.type = function () {
   // Current index of words
@@ -117,24 +120,82 @@ function init() {
   new TypeWriter(txtElement, words, wait);
 }
 
-// Contact from
+////////////////////////// Contact Form /////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
 
 // Listen for from sumit
 
 document.getElementById('contactform').addEventListener('submit', submitFrom);
+
+// function to get from values
+function getInputValue(id) {
+  return document.getElementById(id).value;
+}
 
 function submitFrom(e) {
   e.preventDefault();
 
   // Get value
 
-  var UserName = getInputValue('userName');
-  var UserEmail = getInputValue('userEmail');
-  var UserMessage = getInputValue('userMessage');
+  var userName = getInputValue('userName');
+  var userEmail = getInputValue('userEmail');
+  var userMessage = getInputValue('userMessage');
+
+  // save data to firebase
+
+  saveMessage(userName, userEmail, userMessage);
+
+  showAlert('Message Sent', 'alert');
+
+  // // show alert
+  // document.querySelector('.alert').style.display = 'block';
+
+  // // Hide alert after 3 seconds
+  // setTimeout(function () {
+  //   document.querySelector('.alert').style.display = 'none';
+  // }, 3000);
+
+  //clear form
+  document.getElementById('contactform').reset();
 }
 
-// function to get from values
+////////////////////////// FireBase DB //////////////////////////
+/////////////////////////////////////////////////////////////////
 
-function getInputValue(id) {
-  return document.getElementById(id).value;
+// Creating a table
+var messagesRef = firebase.database().ref('messages');
+
+// save message to firebase
+function saveMessage(name, email, message) {
+  // send data to table message
+  var newMessageRef = messagesRef.push();
+  // set data
+  newMessageRef.set({
+    name: name,
+    email: email,
+    message: message,
+  });
+}
+
+////////////////////////// Show Message //////////////////////////
+/////////////////////////////////////////////////////////////////
+
+function showAlert(message, className) {
+  if (document.querySelector('.alert')) {
+  } else {
+    const alterMessage = document.createElement('div');
+    alterMessage.className = `alert ${className}`;
+    alterMessage.appendChild(document.createTextNode(message));
+
+    const section = document.querySelector('.con-section-a');
+    const main = document.querySelector('#contactform');
+    section.insertBefore(alterMessage, main);
+
+    // Vanish in 3 seconds
+    setTimeout(function () {
+      alterMessage.className = 'remove';
+    }, 2000);
+
+    setTimeout(() => document.querySelector('.remove').remove(), 3500);
+  }
 }
