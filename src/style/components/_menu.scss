@@ -1,5 +1,5 @@
 .menu-btn {
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 20px;
   transform: rotate(45deg);
@@ -9,7 +9,7 @@
   cursor: pointer;
   flex-direction: column;
   transition: ease 0.3s;
-  z-index: 1;
+  z-index: 2;
   margin: 0;
   padding: 0;
 
@@ -77,12 +77,13 @@
 }
 
 .menu {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  // top: 0;
   width: 100%;
   visibility: hidden; // By default the menu is hidden
   text-align: center;
   align-content: center;
+  z-index: 1;
 
   &.show {
     visibility: visible;
@@ -132,11 +133,21 @@
     padding: 1rem 0;
     font-weight: 300;
     text-decoration: none;
+    width: 100%;
     // color: blanchedalmond;
     color: #bdbdbd8e;
+
     transition: ease-out 0.3s;
     &:hover {
       font-size: 50px;
+      // background-color: pink;
+      // color: black;
+    }
+
+    i {
+      // float: left;
+      display: inline-block;
+      // padding: 10px;
     }
   }
 }
