@@ -12,7 +12,14 @@ body {
   min-width: 363px;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  width: 100%;
+  overflow-x: hidden;
+  // background: rgb(22, 22, 22);
 }
+
+// :root {
+//   filter: invert(100%);
+// }
 
 // section {
 //   height: 100%;
