@@ -21,11 +21,10 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body id="body">
     <section>
       <header>
         <!-- btn -->
-
         <div class="menu-btn">
           <span></span>
           <span></span>
@@ -35,13 +34,18 @@
         <div class="menu">
           <ul class="menu-nav">
             <li class="nav-item">
-              <a href="#cover-page" class="nav-link">Home</a>
+              <a href="#cover-page" class="nav-link">
+                home
+              </a>
             </li>
             <li class="nav-item">
               <a href="#about-page" class="nav-link">about</a>
             </li>
             <li class="nav-item">
               <a href="#work-page" class="nav-link">work</a>
+            </li>
+            <li class="nav-item">
+              <a href="#blog-page" class="nav-link">blog</a>
             </li>
             <li class="nav-item">
               <a href="#contact-page" class="nav-link">contact</a>
@@ -64,19 +68,33 @@
             <div class="section-b">
               <div class="about">
                 <div class="bio">
-                  <span>"</span>
-                  <p>
-                    I am a professional Web Developer, Programmer, Designer &
-                    Enterprenuer.
-                  </p>
+                  <span class="quote">"</span>
+                  <h1>
+                    I am a professional
+
+                    <span
+                      class="txt-type"
+                      data-wait="9000"
+                      data-words='["Web Developer, Programmer, Designer & Enterprenuer."]'
+                    ></span>
+                  </h1>
                 </div>
                 <div class="social">
-                  <i class="fab fa-github"></i> <i class="fab fa-google"></i>
-                  <i class="fab fa-twitter"></i>
+                  <a href="https://github.com/danielmponda"
+                    ><i class="fab fa-github"></i>
+                  </a>
+
+                  <a href="mailto:dlmponda@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+
+                  <a href="https://twitter.com/daniel_mponda">
+                    <i class="fab fa-twitter"></i>
+                  </a>
                 </div>
               </div>
 
-              <a href="#about-page">
+              <a href="#about-page" class="scroll">
                 <div class="scroll-arrows">
                   <span></span>
                   <span></span>
@@ -89,236 +107,270 @@
 
         <!-- About Page 02-->
         <div class="about-page" id="about-page">
-          <h1 class="about-title">About Me</h1>
-
-          <div class="section-a">
-            <h1>Few words</h1>
-            <p class="first-desc">
-              My goal is to create the brand new world for my readers while
-              telling a story of real people. Since the beginning of my career,
-              I’m writing books for various audiences that are looking for
-              original storytelling and innovative topics.
-            </p>
-
-            <p class="first-desc">
-              My goal is to create the brand new world for my readers while
-              telling a story of real people. Since the beginning of my career,
-              I’m writing books for various audiences that are looking for
-              original storytelling and innovative topics.
-            </p>
-            <p class="second-desc">
-              My goal is to create the brand new world for my readers while
-              telling a story of real people. Since the beginning of my career,
-              I’m writing books for various audiences that are looking for
-              original storytelling and innovative topics.
-            </p>
-            <a href="">My Work</a>
+          <div class="title">
+            <h1>- About Me -</h1>
           </div>
-          <div class="section-b">
-            <h1 class="">Skills</h1>
+          <div class="container">
+            <div class="section-a">
+              <h1>Few words</h1>
+              <p class="first-desc">
+                A recent Management Information System graduate who is highly
+                ambitious and eager to show case both the technical and artistic
+                skill set in mobile and web application development.
+                <!-- A quick
+                learner who can grasp new web technologies, ideas and can
+                communicate clearly and effectively. -->
+              </p>
 
-            <ul class="outterList">
-              <div>
-                <li class="listoutter">
-                  <p>Command-line interface</p>
-                  <ul class="innerList">
-                    <li>
-                      <img class="bash" src="./img/pngwaveBash.png" alt="" />
-                    </li>
-                  </ul>
-                </li>
-                <li class="listoutter">
-                  <p>Package Manager</p>
-
-                  <ul class="innerList">
-                    <li>
-                      <img class="NPM" src="./img/pngwaveNPM.png" alt="" />
-
-                      <img class="yarn" src="./img/pngguru.com.png" ralt="" />
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="listoutter">
-                  <p>Web Technoloies</p>
-
-                  <ul class="innerList">
-                    <li>
-                      <img
-                        class="html"
-                        src="./img/pngguru.com (4).png"
-                        ralt=""
-                      />
-
-                      <img
-                        class="css"
-                        src="./img/pngguru.com (1).png"
-                        ralt=""
-                      />
-
-                      <img class="js" src="./img/pngguru.com (3).png" ralt="" />
-                    </li>
-                  </ul>
-                </li>
-                <li class="listoutter">
-                  <p>Code Quality Tool</p>
-                  <ul class="innerList">
-                    <li>
-                      <img
-                        class="eslint"
-                        src="./img/1_3AdbbRN3GoTbz72XqfO96g.png"
-                        ralt=""
-                      />
-
-                      <img class="stdjs" src="./img/Lint5.png" ralt="" />
-
-                      <img class="airbnb" src="./img/698437.png" ralt="" />
-                    </li>
-                  </ul>
-                </li>
-                <li class="listoutter">
-                  <p>Module Bundlers</p>
-                  <ul class="innerList">
-                    <li>
-                      <img
-                        class="webpack"
-                        src="./img/logo-on-white-bg.png"
-                        ralt=""
-                      />
-
-                      <img class="parcle" src="./img/parcel-og.png" ralt="" />
-                    </li>
-                  </ul>
-                </li>
-              </div>
-              <div>
-                <li class="listoutter">
-                  <p>JS Frameworks</p>
-                  <ul class="innerList">
-                    <li>
-                      <img
-                        class="react"
-                        src="./img/png-transparent-react-javascript-angularjs-ionic-github-text-logo-symmetry.png"
-                        ralt=""
-                      />
-
-                      <img
-                        class="reactnt"
-                        src="./img/510-5100567_react-native-svg-transformer-allows-you-import-svg.png"
-                        ralt=""
-                      />
-                    </li>
-                  </ul>
-                </li>
-                <li class="listoutter">
-                  <p>Back End</p>
-                  <ul class="innerList">
-                    <li>
-                      <img
-                        class="node"
-                        src="./img/node-js-javascript-client-side-server-side-asynchronous-i-o-others-png-clip-art.png"
-                        ralt=""
-                      />
-
-                      <img
-                        class="php"
-                        src="./img/php-1-logo-png-transparent.png"
-                        ralt=""
-                      />
-                    </li>
-                  </ul>
-                </li>
-                <li class="listoutter">
-                  <p>Database</p>
-                  <ul class="innerList">
-                    <li>
-                      <img
-                        class="fbase"
-                        src="./img/kisspng-firebase-cloud.png"
-                        ralt=""
-                      />
-
-                      <img class="postgre" src="./img/download.png" ralt="" />
-                    </li>
-                  </ul>
-                </li>
-                <li class="listoutter">
-                  <p>Version Control Systems</p>
-                  <ul class="innerList">
-                    <li>
-                      <img
-                        class="github"
-                        src="./img/png-clipart-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper.png"
-                        ralt=""
-                      />
-                    </li>
-                  </ul>
-                </li>
-              </div>
-            </ul>
-          </div>
-
-          <!-- <a href="#work-page">
-            <div class="scroll-arrows">
-              <span></span>
-              <span></span>
-              <span></span>
+              <p class="first-desc">
+                I have both hands-on experience with front and back end web
+                technologies. I efficiently translate designs to front-end code
+                using modern HTML, CSS, and JavaScript in particular using the
+                ReactJS library.
+              </p>
+              <p class="second-desc">
+                In addition, depending on the scale of the project I'm also able
+                to implement server-side web application logic using back end
+                technologies such as PHP and MySQL though more recently I have
+                been leaning more towards node JS and mongoDB.
+              </p>
+              <a href="#work-page">My Work</a>
             </div>
-          </a> -->
+            <div class="section-b">
+              <h1 class="">Skills</h1>
+
+              <ul class="outterList">
+                <div>
+                  <li class="listoutter">
+                    <p>Command-line interface</p>
+                    <ul class="innerList">
+                      <li>
+                        <img class="bash" src="./img/pngwaveBash.png" alt="" />
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="listoutter">
+                    <p>Package Manager</p>
+
+                    <ul class="innerList">
+                      <li>
+                        <img class="NPM" src="./img/pngwaveNPM.png" alt="" />
+
+                        <img class="yarn" src="./img/pngguru.com.png" ralt="" />
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="listoutter">
+                    <p>Web Technoloies</p>
+
+                    <ul class="innerList">
+                      <li>
+                        <img
+                          class="html"
+                          src="./img/pngguru.com (4).png"
+                          ralt=""
+                        />
+
+                        <img
+                          class="css"
+                          src="./img/pngguru.com (1).png"
+                          ralt=""
+                        />
+
+                        <img
+                          class="js"
+                          src="./img/pngguru.com (3).png"
+                          ralt=""
+                        />
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- <li class="listoutter">
+                    <p>Code Quality Tool</p>
+                    <ul class="innerList">
+                      <li>
+                        <img
+                          class="eslint"
+                          src="./img/1_3AdbbRN3GoTbz72XqfO96g.png"
+                          ralt=""
+                        />
+
+                        <img class="stdjs" src="./img/Lint5.png" ralt="" />
+
+                        <img class="airbnb" src="./img/698437.png" ralt="" />
+                      </li>
+                    </ul>
+                  </li> -->
+                  <li class="listoutter">
+                    <p>Module Bundlers</p>
+                    <ul class="innerList">
+                      <li>
+                        <img
+                          class="webpack"
+                          src="./img/logo-on-white-bg.png"
+                          ralt=""
+                        />
+
+                        <img class="parcle" src="./img/parcel-og.png" ralt="" />
+                      </li>
+                    </ul>
+                  </li>
+                </div>
+                <div>
+                  <li class="listoutter">
+                    <p>JS Frameworks</p>
+                    <ul class="innerList">
+                      <li>
+                        <img
+                          class="react"
+                          src="./img/png-transparent-react-javascript-angularjs-ionic-github-text-logo-symmetry.png"
+                          ralt=""
+                        />
+
+                        <img
+                          class="reactnt"
+                          src="./img/510-5100567_react-native-svg-transformer-allows-you-import-svg.png"
+                          ralt=""
+                        />
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="listoutter">
+                    <p>Back End</p>
+                    <ul class="innerList">
+                      <li>
+                        <img
+                          class="node"
+                          src="./img/node-js-javascript-client-side-server-side-asynchronous-i-o-others-png-clip-art.png"
+                          ralt=""
+                        />
+
+                        <img
+                          class="php"
+                          src="./img/php-1-logo-png-transparent.png"
+                          ralt=""
+                        />
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="listoutter">
+                    <p>Database</p>
+                    <ul class="innerList">
+                      <li>
+                        <img
+                          class="fbase"
+                          src="./img/kisspng-firebase-cloud.png"
+                          ralt=""
+                        />
+
+                        <img class="postgre" src="./img/download.png" ralt="" />
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="listoutter">
+                    <p>Version Control Systems</p>
+                    <ul class="innerList">
+                      <li>
+                        <img
+                          class="github"
+                          src="./img/png-clipart-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper.png"
+                          ralt=""
+                        />
+                      </li>
+                    </ul>
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <!-- Work Page 03-->
         <div class="work-page" id="work-page">
-          <div class="title"><h1>Work</h1></div>
-
-          <div class="section-a">
-            <div class="project jsProjects">
-              <h1>Vanella JS</h1>
-              <div class="jsPro weatherapp">
-                <div>
-                  <h2>Weather App</h2>
-                  <img src="./img/weather.PNG" alt="" />
+          <div class="title">
+            <h1>- Work -</h1>
+          </div>
+          <div class="container">
+            <div class="section-a">
+              <div class="project jsProjects">
+                <!-- <h1>Vanella JS</h1> -->
+                <div class="jsPro weatherapp">
+                  <div>
+                    <h2>Weather App</h2>
+                    <img src="./img/weathermap.jpg" alt="" />
+                    <a href="https://github.com/danielmponda/weatherApp"
+                      >Code</a
+                    >
+                    <a href="https://danielmponda.github.io/weatherApp">App</a>
+                  </div>
                 </div>
-                <div><a href="">Code</a> <a href="">App</a></div>
+
+                <div class="jsPro portifolio">
+                  <div>
+                    <h2>Portifolio</h2>
+                    <img src="./img/port.PNG" alt="" />
+
+                    <a href="https://github.com/danielmponda/portfolio">Code</a>
+                    <a href="https://github.com/danielmponda/portfolio">App</a>
+                  </div>
+                </div>
               </div>
 
-              <div class="jsPro portifolio">
-                <div>
-                  <h2>Portifolio</h2>
-                  <img src="./img/port.PNG" alt="" />
+              <div class="project ReactVueProjects">
+                <!-- <h1>React</h1> -->
+                <div class="ReactVuePro weatherapp">
+                  <div>
+                    <h2>Cooking Recipe</h2>
+                    <img src="./img/recipe.jpg" alt="" />
 
-                  <a href="">Code</a>
-                  <a href="">App</a>
+                    <a href="https://github.com/danielmponda/cooking-recipe-app"
+                      >Code</a
+                    >
+                    <a href="https://danielmponda.github.io/cooking-recipe-app">App</a>
+                  </div>
+                </div>
+                <div class="ReactVuePro weatherapp">
+                  <div>
+                    <h2>Ongoing-Project </h2>
+                    <img src="./img/empty.jpg" alt="" />
+
+                    <a href="">Code</a> <a href="">App</a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="project ReactVueProjects">
-              <h1>React & Vue</h1>
-              <div class="ReactVuePro weatherapp">
-                <div>
-                  <h2>Todo List</h2>
-                  <img src="./img/project.jpg" alt="" />
+              <div class="project ReactNativeProjects">
+                <!-- <h1>React Native</h1> -->
+                <div class="ReactNativeProjects weatherapp">
+                  <div>
+                    <h2>VegDelight</h2>
+                    <img src="./img/veg2.png" alt="" />
+                    <a  class='alonelink' href="https://github.com/danielmponda/VegDelight">Code</a>
+                    <!-- <a href="">App</a> -->
+                  </div>
                 </div>
-                <div><a href="">Code</a> <a href="">App</a></div>
-              </div>
-            </div>
+                <!-- <div class="ReactNativeProjects weatherapp">
+                  <div>
+                    <h2>Empty</h2>
+                    <img src="./img/empty.jpg" alt="" />
 
-            <div class="project ReactNativeProjects">
-              <h1>React Native</h1>
-              <div class="ReactNativeProjects weatherapp">
-                <div>
-                  <h2>VegDelight</h2>
-                  <img src="./img/veg2.png" alt="" />
-                </div>
-                <div><a href="">Code</a> <a href="">App</a></div>
+                    <a href="">Code</a> <a href="">App</a>
+                  </div>
+                </div> -->
               </div>
-              <div class="ReactNativeProjects weatherapp">
-                <div>
-                  <h2>Todo List</h2>
-                  <img src="./img/project.jpg" alt="" />
+
+              <div class="project ReactNativeProjects">
+                <!-- <h1>Back End</h1> -->
+                <div class="ReactNativeProjects weatherapp">
+                  <div>
+                    <h2>ART Patient Card</h2>
+                    <img src="./img/back.png" alt="" />
+                  </div>
+                  <div><a href="https://github.com/danielmponda/art" class='alonelink'>Code</a>
+                    <!-- <a href="">App</a> -->
+                  </div>
                 </div>
-                <div><a href="">Code</a> <a href="">App</a></div>
               </div>
             </div>
           </div>
@@ -326,28 +378,68 @@
 
         <!-- Blog Page 04-->
         <div class="blog-page" id="blog-page">
-          <div class="title">
-            <h1>Blog</h1>
+          <div class="title sticky">
+            <h1>- Blog -</h1>
           </div>
-          <div class="section-a">
-            <div class="project jsProjects">
-              <h1>Web Tech</h1>
-              <div class="jsPro weatherapp">
-                <div>
-                  <h2>Git Hub</h2>
-                  <img src="./img/blog.jpg" alt="" />
+          <div class="container">
+            <div class="section-a">
+              <!-- <h1>Web Tech</h1> -->
+              <div class="project jsProjects">
+                <div class="jsPro weatherapp">
+                  <div>
+                    <h2>Git Hub</h2>
+                    <img src="./img/githubblog.jpg" alt="" />
+                  </div>
+                  <div>
+                    <a href="https://danielmponda.github.io/getting-git-and-github/">Read</a>
+                  </div>
                 </div>
-                <div><a href="">Read</a></div>
-              </div>
 
-              <div class="jsPro portifolio">
-                <div>
-                  <h2>NPM</h2>
-                  <img src="./img/blog.jpg" alt="" />
+                <!-- <div class="jsPro portifolio">
+                  <div>
+                    <h2>Empty</h2>
+                    <img src="./img/empty.jpg" alt="" />
 
-                  <a href="">Read</a>
+                    <a href="">Read</a>
+                  </div>
+                </div> -->
+
+                <div class="jsPro portifolio">
+                  <div>
+                    <h2>Ongoing-Project</h2>
+                    <img src="./img/empty.jpg" alt="" />
+
+                    <a href="">Read</a>
+                  </div>
                 </div>
               </div>
+              <!-- <div class="project jsProjects">
+                <div class="jsPro weatherapp">
+                  <div>
+                    <h2>Git Hub</h2>
+                    <img src="./img/githubblog.jpg" alt="" />
+                  </div>
+                  <div><a href="">Read</a></div>
+                </div>
+
+                <div class="jsPro portifolio">
+                  <div>
+                    <h2>NPM</h2>
+                    <img src="./img/npmblog.jpg" alt="" />
+
+                    <a href="">Read</a>
+                  </div>
+                </div>
+
+                <div class="jsPro portifolio">
+                  <div>
+                    <h2>NPM</h2>
+                    <img src="./img/npmblog.jpg" alt="" />
+
+                    <a href="">Read</a>
+                  </div>
+                </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -355,40 +447,85 @@
         <!-- Contact Page 05-->
         <div class="contact-page" id="contact-page">
           <div class="title">
-            <h1>Contact</h1>
+            <h1>- Contact -</h1>
           </div>
-          <div class="section-a">
-            <h1>Get in touch</h1>
+          <div class="container">
+            <!-- <h1 class="get">Get in touch</h1> -->
 
-            <div class="contact-form">
-              <!-- <h2>Email Us</h2> -->
-              <div>
-                <label for="">Name</label>
-                <input type="text" name="name" />
+            <dev class="sec-wrapper">
+              <div class="section-a">
+                <img
+                  class="contactImg"
+                  src="./img/undraw_opened_gi4n.svg"
+                  alt=""
+                />
+                <!-- <h1 class="get">Service</h1> -->
+                <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
+                nihil quae numquam nobis similique rem eum quaerat illum omnis
+                asperiores, facere tempora voluptate. Unde possimus a consectetur
+                nemo illum non. -->
               </div>
+              <div class="section-b con-section-b">
+                <form action="" id="contactform">
+                  <div class="contact-form">
+                    <!-- User's Name  -->
+                    <div>
+                      <label for="">Name</label>
+                      <input type="text" name="name" id="userName" required />
+                    </div>
 
-              <div>
-                <label for="">Email</label>
-                <input type="email" name="email" />
-              </div>
+                    <!-- User's Email  -->
+                    <div>
+                      <label for="">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="userEmail"
+                        required
+                      />
+                    </div>
 
-              <div>
-                <label for="">Message</label>
-                <textarea type="text" name="Message" rows="5"></textarea>
-              </div>
-              <div>
-                <button type="text" name="Message" rows="8" class="submit-btn">
-                  Submit
-                </button>
-              </div>
-            </div>
+                    <!-- User's Message  -->
+                    <div>
+                      <label for="">Message</label>
+                      <textarea
+                        type="text"
+                        name="Message"
+                        rows="5"
+                        id="userMessage"
+                        required
+                      ></textarea>
+                    </div>
 
-            <div class="social">
-              <div>
-                <i class="fab fa-github"></i> <i class="fab fa-google"></i>
-                <i class="fab fa-twitter"></i>
+                    <!-- Submit Button -->
+                    <div>
+                      <button
+                        type="submit"
+                        name="Message"
+                        rows="8"
+                        class="submit-btn"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="social">
+                  <a href="https://github.com/danielmponda"
+                    ><i class="fab fa-github"></i>
+                  </a>
+
+                  <a href="mailto:dlmponda@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+
+                  <a href="https://twitter.com/daniel_mponda">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
               </div>
-            </div>
+            </dev>
           </div>
 
           <a href="#cover-page">
@@ -401,6 +538,8 @@
         </div>
       </main>
     </section>
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase.js"></script>
     <script src="./js/index.js"></script>
     <script>
       $(function () {
