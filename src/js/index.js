@@ -1,5 +1,8 @@
 /* eslint-disable */
 
+////////////////////////// firebaseConfig ////////////////////////
+/////////////////////////////////////////////////////////////////
+
 var firebaseConfig = {
   apiKey: 'AIzaSyBe6Pw_F6hr2kywHS_FJXa5JrNZVYCyijU',
   authDomain: 'portfoliocontactform-beb39.firebaseapp.com',
@@ -9,23 +12,19 @@ var firebaseConfig = {
   messagingSenderId: '87529637836',
   appId: '1:87529637836:web:68b29936dab1e3e474ff69',
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
-// const loader = document.querySelector('.hex-border');
-
-// window.addEventListener('load', () => {
-//   loader.style.display = 'none';
-// });
 
 ////////////////////////// Menu /////////////////////////////////
 /////////////////////////////////////////////////////////////////
 
-const menuBtn = document.querySelector('.menu-btn');
-const menu = document.querySelector('.menu');
-const menuNav = document.querySelector('.menu-nav');
+const body = document.querySelector('#body'); // Menu Button
 
-const navItems = document.querySelectorAll('.nav-item');
+const menuBtn = document.querySelector('.menu-btn'); // Menu Button
+const menu = document.querySelector('.menu'); // Menu Wrapper
+const menuNav = document.querySelector('.menu-nav'); // Nav Section
+const navItems = document.querySelectorAll('.nav-item'); // Nav List
 
 // Set Initail State of Menu
 let showMenu = false;
@@ -38,7 +37,7 @@ const toggleMenu = () => {
     menu.classList.add('show');
     navItems.forEach((item) => item.classList.add('show'));
 
-    showMenu = true;
+    showMenu = true; // Set Menu Off
   } else {
     menuBtn.classList.remove('close');
     menu.classList.remove('show');
@@ -46,11 +45,17 @@ const toggleMenu = () => {
     menu.classList.remove('show');
     navItems.forEach((item) => item.classList.remove('show'));
 
-    showMenu = false;
+    showMenu = false; // Set Menu On
   }
 };
 
+// Menu Button Onclick call toggleMenu
 menuBtn.addEventListener('click', toggleMenu);
+
+// On click on each link also call toggleMenu
+navItems.forEach((item) =>
+  item.firstElementChild.addEventListener('click', toggleMenu)
+);
 
 ////////////////////////// Type Method ////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
@@ -108,13 +113,14 @@ TypeWriter.prototype.type = function () {
   setTimeout(() => this.type(), typeSpeed);
 };
 
-// Init on Dom Load
+// On DOMContentLoaded call init
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
   const txtElement = document.querySelector('.txt-type');
   const words = JSON.parse(txtElement.getAttribute('data-words'));
-  const wait = txtElement.getAttribute('data-wait');
+
+  const wait = txtElement.getAttribute('data-wait'); // getAttribute waitTime
 
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
@@ -123,11 +129,11 @@ function init() {
 ////////////////////////// Contact Form /////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 
-// Listen for from sumit
+// Conatact Form on Submit call submitFrom
 
 document.getElementById('contactform').addEventListener('submit', submitFrom);
 
-// function to get from values
+// function to get Input Value
 function getInputValue(id) {
   return document.getElementById(id).value;
 }
@@ -135,34 +141,24 @@ function getInputValue(id) {
 function submitFrom(e) {
   e.preventDefault();
 
-  // Get value
-
   var userName = getInputValue('userName');
   var userEmail = getInputValue('userEmail');
   var userMessage = getInputValue('userMessage');
 
-  // save data to firebase
-
+  // Send data to firebase
   saveMessage(userName, userEmail, userMessage);
 
+  // Notify Message Sent
   showAlert('Message Sent', 'alert');
 
-  // // show alert
-  // document.querySelector('.alert').style.display = 'block';
-
-  // // Hide alert after 3 seconds
-  // setTimeout(function () {
-  //   document.querySelector('.alert').style.display = 'none';
-  // }, 3000);
-
-  //clear form
+  // reset form input
   document.getElementById('contactform').reset();
 }
 
 ////////////////////////// FireBase DB //////////////////////////
 /////////////////////////////////////////////////////////////////
 
-// Creating a table
+// Creating a table / Ref
 var messagesRef = firebase.database().ref('messages');
 
 // save message to firebase
@@ -182,20 +178,22 @@ function saveMessage(name, email, message) {
 
 function showAlert(message, className) {
   if (document.querySelector('.alert')) {
+    // If message already exist do nothing
   } else {
-    const alterMessage = document.createElement('div');
-    alterMessage.className = `alert ${className}`;
-    alterMessage.appendChild(document.createTextNode(message));
+    // else
+    const alterMessage = document.createElement('div'); // create a div
+    alterMessage.className = `alert ${className}`; // Add class to the div
+    alterMessage.appendChild(document.createTextNode(message)); // Create textNode and append it to the div
 
-    const section = document.querySelector('.con-section-a');
+    const section = document.querySelector('.con-section-b');
     const main = document.querySelector('#contactform');
-    section.insertBefore(alterMessage, main);
+    section.insertBefore(alterMessage, main); // insert the div between section and main element
 
     // Vanish in 3 seconds
     setTimeout(function () {
-      alterMessage.className = 'remove';
+      alterMessage.className = 'remove'; // set class name to remove
     }, 2000);
 
-    setTimeout(() => document.querySelector('.remove').remove(), 3500);
+    setTimeout(() => document.querySelector('.remove').remove(), 3500); // delete element with remove class name
   }
 }
